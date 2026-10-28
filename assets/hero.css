@@ -1,0 +1,61 @@
+/* Selected proposal B: cyan title, expanded local light mask, outline links. */
+@font-face{font-family:'WorldFlow Rounded';src:url('fonts/Nunito.ttf') format('truetype');font-style:normal;font-weight:200 1000;font-display:swap}
+.hero-shell{padding-top:0}
+.hero-shell .top-nav{position:relative;z-index:2;box-shadow:none;background:transparent;border:0;padding:6px 0;min-height:88px}
+.brand{display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.brand-logo{display:block;width:142px;height:auto}
+footer .brand-logo{width:180px}
+.hero{position:relative;isolation:isolate;container-type:inline-size;width:min(1180px,calc(100% - 96px));aspect-ratio:5/3;max-height:none;min-height:0;margin:0 auto;padding:0;overflow:hidden;border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--ink)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+.hero-shade{position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 46% 37% at 50% 65%,#f7f8f1ed 0%,#f7f8f1d9 43%,#f7f8f18c 70%,#f7f8f100 100%)}
+.hero-content{position:absolute;inset:auto 0 10%;display:flex;flex-direction:column;align-items:center;padding:0 5%;color:#133f43}
+.hero h1{margin:0;max-width:none;width:100%}
+.hero .worldflow-word{display:block;width:fit-content;margin-inline:auto;font-family:'WorldFlow Rounded','Arial Rounded MT Bold',Arial,sans-serif;font-size:7.36cqw;font-style:normal;font-weight:700;line-height:1.12;letter-spacing:-.025em;color:#168fa4;text-shadow:none}
+.hero-subtitle{display:block;margin-top:1.5cqw;font-family:Arial,Helvetica,sans-serif;font-size:2.8cqw;font-weight:500;letter-spacing:0;line-height:1.4;color:#133f43;text-shadow:none}
+.hero .authors{color:#133f43;opacity:.8;font-size:1.3cqw;line-height:1.4;margin:1.4cqw 0 0;letter-spacing:0}
+.hero .cta-row{flex-wrap:wrap;max-width:100%;gap:.6cqw;margin:2.4cqw 0 0}
+.hero .cta-button{min-width:7.2cqw;min-height:3.2cqw;padding:.45cqw .7cqw;gap:.45cqw;background:transparent;border:1px solid #245657;border-radius:100px;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;color:#000;font-size:1.1cqw;line-height:1.4}
+.hero .cta-button svg{width:1.6cqw;height:1.6cqw}
+.hero .cta-button:hover{background:transparent;color:#000;transform:translateY(-1px)}
+.hero .resource-arxiv{display:block;width:4.7cqw;height:2.1cqw;object-fit:contain}
+.hero .resource-github{display:block;width:1.6cqw;height:1.6cqw;object-fit:contain}
+.hero-tldr{text-align:center;margin-block:0;padding:24px 0 40px}
+.hero :focus-visible{outline-color:#168fa4}
+@media(max-width:800px){.hero{width:calc(100% - 48px);min-height:500px}.hero .worldflow-word{font-size:max(48px,7.36cqw)}.hero-subtitle{font-size:max(22px,2.8cqw)}.hero .authors{font-size:max(12px,1.3cqw)}.hero .cta-button{font-size:max(12px,1.35cqw);min-height:35px;min-width:88px}.hero .cta-button svg,.hero .resource-github{width:15px;height:15px}.hero .resource-arxiv{width:45px;height:21px}.hero-shade{background:radial-gradient(ellipse 63% 37% at 50% 65%,#f7f8f1ed 0%,#f7f8f1d9 43%,#f7f8f18c 70%,#f7f8f100 100%)}}
+@media(max-width:600px){.hero-shell .top-nav{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:0;padding:0 0 10px}.brand-logo{width:124px}.hero{width:calc(100% - 28px);min-height:520px;aspect-ratio:auto}.hero-content{padding:0 22px}.hero .worldflow-word{font-size:clamp(42px,12cqw,64px)}.hero-subtitle{font-size:clamp(20px,5.5cqw,25px);line-height:1.4;margin-top:14px}.hero .authors{margin-top:13px;font-size:11px}.hero .cta-row{gap:8px;margin-top:20px}.hero .cta-button{min-width:76px;min-height:33px;padding:5px 10px;font-size:11px;gap:5px}.hero .resource-arxiv{width:41px;height:19px}.hero .resource-github{width:14px;height:14px}.hero-tldr{font-size:14px;padding:20px 0 30px}.hero-shade{background:radial-gradient(ellipse 85% 37% at 50% 65%,#f7f8f1ed 0%,#f7f8f1d9 43%,#f7f8f18c 70%,#f7f8f100 100%)}}
+
+/* Resource labels remain black; icons are bundled for offline use. */
+.hero .cta-button{white-space:nowrap;flex-shrink:0}
+.hero .resource-huggingface{display:block;width:1.8cqw;height:1.8cqw;object-fit:contain}
+@media(max-width:800px){.hero .resource-huggingface{width:17px;height:17px}}
+@media(max-width:600px){.hero .resource-huggingface{width:15px;height:15px}}
+
+/* A soft local light wash keeps the outer resource links readable over video. */
+.hero .cta-row{position:relative;isolation:isolate}
+.hero .cta-row::before{content:"";position:absolute;inset:-2.8cqw -6cqw;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 50% 50% at center,rgba(247,248,241,.32) 0%,rgba(247,248,241,.26) 55%,rgba(247,248,241,.12) 80%,rgba(247,248,241,0) 100%)}
+@media(max-width:600px){.hero .cta-row::before{inset:-24px -36px}}
+
+/* Organization wordmark, matching the GenSight project header. */
+.hero-shell .top-nav{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:18px}
+.top-nav .nav-links{justify-content:center;flex-wrap:wrap}
+.organization-logo{display:block;width:auto;height:24px;max-width:100%;justify-self:end;object-fit:contain}
+@media(max-width:1050px){
+  .hero-shell .top-nav{grid-template-columns:1fr auto;row-gap:4px;padding-bottom:12px}
+  .top-nav .brand{justify-self:start;grid-column:1;grid-row:1}
+  .top-nav .organization-logo{grid-column:2;grid-row:1}
+  .top-nav .nav-links{grid-column:1/-1;grid-row:2;width:100%}
+}
+@media(max-width:600px){.organization-logo{height:20px}}
+
+/* Author names wrap as complete units on smaller screens. */
+.hero .authors{opacity:1;max-width:100%;font-size:clamp(11px,1.22cqw,15px);line-height:1.65}
+.hero .author-row{display:flex;flex-wrap:wrap;justify-content:center;gap:0 .35em;margin:0;font-weight:700}
+.hero .author-row>span,.hero .affiliations>span{white-space:nowrap}
+.hero .authors sup{font-size:.7em;line-height:0;vertical-align:super;margin-left:.08em}
+.hero .affiliations{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.4em;margin:.5em 0 0;font-size:.9em;font-weight:400}
+@media(max-width:600px){.hero .authors{font-size:11px;line-height:1.7}.hero .cta-row{margin-top:16px}}
+
+.hero .author-row a{text-decoration:none;text-underline-offset:.2em}
+.hero .author-row a:hover,.hero .author-row a:focus-visible{text-decoration:underline}
+.hero .author-notes{display:flex;flex-wrap:wrap;justify-content:center;gap:0 1.2em;margin:.3em 0 0;font-size:.85em;font-weight:400}
+.hero .author-notes>span{white-space:nowrap}
