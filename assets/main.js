@@ -1,5 +1,5 @@
 /* Replace each remaining # with the final resource URL when it is ready. */
-const resourceLinks = { paper: '#', arxiv: '#', code: 'https://github.com/worldflow-rbs/worldflow', data: '#', model: '#' };
+const resourceLinks = { paper: 'https://arxiv.org/pdf/2610.39278', arxiv: 'https://arxiv.org/pdf/2610.39278', code: 'https://github.com/worldflow-rbs/worldflow', data: '#', model: '#' };
 let toastTimer;
 document.querySelectorAll('[data-resource]').forEach(link => {
   const resource = link.dataset.resource;
