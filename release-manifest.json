@@ -1,7 +1,7 @@
 {
   "entry": "index.html",
   "file_count": 856,
-  "bytes": 94742725,
+  "bytes": 94743594,
   "files": [
     {
       "path": ".nojekyll",
@@ -15,8 +15,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 968,
-      "sha256": "baea02a60cb9586d0228229b02fa1b08ad9f04b1de8dd09eba14b4a4435b0985"
+      "bytes": 1012,
+      "sha256": "6973203818f5623f4763fedcc005769f673e0cbde932503c0064334d671061ce"
     },
     {
       "path": "assets/ablation-insights.css",
@@ -85,8 +85,8 @@
     },
     {
       "path": "assets/main.js",
-      "bytes": 1168,
-      "sha256": "e090fbe486f8944b52906fd2dcbaea3fff7412c6b9035eac59726c195afd9206"
+      "bytes": 1230,
+      "sha256": "2bc0732e6ae347dc100e974d63f5afea007703cfa9060ca790f5b2b2e36572fc"
     },
     {
       "path": "assets/motivation.css",
@@ -4280,8 +4280,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 168565,
-      "sha256": "9e9879454b5f71019491fab0e91f9edc262753fd70435a689c3603cbf0b4a644"
+      "bytes": 169328,
+      "sha256": "6a549a1dc3877b8a101f6c71a98013bb58691e1483c11374d55cbb33cc9e8941"
     }
   ]
 }
