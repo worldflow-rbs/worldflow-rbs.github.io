@@ -1,5 +1,5 @@
 /* Replace each remaining # with the final resource URL when it is ready. */
-const resourceLinks = { paper: 'https://arxiv.org/pdf/2610.39278', arxiv: 'https://arxiv.org/pdf/2610.39278', code: 'https://github.com/worldflow-rbs/worldflow', data: '#', model: '#' };
+const resourceLinks = { paper: 'https://arxiv.org/pdf/2610.39278', arxiv: 'https://arxiv.org/pdf/2610.39278', code: 'https://github.com/roboscience-ai/worldflow', data: '#', model: '#' };
 let toastTimer;
 document.querySelectorAll('[data-resource]').forEach(link => {
   const resource = link.dataset.resource;
@@ -15,6 +15,7 @@ document.querySelectorAll('[data-resource]').forEach(link => {
   });
 });
 
+
 // The composed background loops silently without on-page controls.
 const heroVideo = document.querySelector('.hero-video');
 function resumeBackground() {
@@ -25,3 +26,4 @@ document.addEventListener('visibilitychange', () => {
   else resumeBackground();
 });
 resumeBackground();
+
